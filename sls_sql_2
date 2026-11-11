@@ -1,0 +1,25 @@
+CREATE DATABASE Food;
+
+USE Food;
+
+CREATE TABLE Foods (
+    Item_ID INT PRIMARY KEY,
+    Item_Name VARCHAR(50) NULL,
+    Price DECIMAL(10,2) DEFAULT 10.00
+);
+
+INSERT INTO Foods VALUES
+(101, 'Burger', 150),
+(102, 'Pizza', 450),
+(103, 'Sandwich', 80),
+(104, 'Chicken', 300),
+(105, 'Curd Rice', 600),
+(106, NULL, 200);
+
+INSERT INTO Foods (Item_ID, Item_Name)
+VALUES (107, 'Juice');
+
+SELECT * FROM Foods;
+
+SELECT * FROM Foods
+WHERE Price > 100 AND Price < 500;
